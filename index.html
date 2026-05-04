@@ -1,84 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Certificate Verification</title>
+  <title>EduSkills Certificate Verification</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
-      background: #eef2f7;
-      font-family: Arial, sans-serif;
+      background: #edf1f7;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
     }
 
-    /* HEADER */
-    .header {
-      background: white;
-      padding: 14px;
+    /* TOP NAV BAR */
+    .topbar {
+      width: 100%;
+      background: #ffffff;
+      padding: 14px 0;
       text-align: center;
       font-weight: 600;
+      font-size: 15px;
       color: #1a237e;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      letter-spacing: 0.5px;
+      border-bottom: 1px solid #e0e0e0;
+      letter-spacing: 0.3px;
     }
 
     /* MAIN WRAPPER */
-    .container {
+    .wrapper {
       display: flex;
       justify-content: center;
-      margin-top: 40px;
+      margin-top: 50px;
     }
 
     /* CARD */
     .card {
-      background: white;
-      padding: 25px;
+      width: 1000px;
+      max-width: 95%;
+      background: #ffffff;
       border-radius: 6px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      padding: 25px;
       text-align: center;
     }
 
-    /* CERTIFICATE */
+    /* CERTIFICATE IMAGE */
     .certificate {
-      width: 900px;
-      max-width: 95%;
+      width: 100%;
       border-radius: 4px;
     }
 
-    /* VERIFIED BADGE */
-    .verified {
+    /* STATUS ROW */
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-top: 15px;
-      font-size: 16px;
+      font-size: 14px;
+    }
+
+    .verified {
       color: #2e7d32;
       font-weight: 600;
     }
 
-    /* FOOTER INFO */
-    .meta {
-      margin-top: 10px;
-      font-size: 13px;
-      color: #666;
+    .cert-id {
+      color: #555;
     }
+
+    /* SUBTLE RESPONSIVENESS */
+    @media (max-width: 768px) {
+      .card {
+        padding: 15px;
+      }
+
+      .status-row {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
 
-<div class="header">
-AICTE EduSkills Virtual Internship Verification Portal
-</div>
-
-<div class="container">
-  <div class="card">
-
-    <img src="certificate.png" class="certificate" />
-
-    <div class="verified">✔ Verified Certificate</div>
-
-    <div class="meta">
-      Certificate ID: 4b94acf294879eefac01
-    </div>
-
+  <!-- HEADER -->
+  <div class="topbar">
+    AICTE EduSkills Virtual Internship Verification Portal
   </div>
-</div>
+
+  <!-- MAIN -->
+  <div class="wrapper">
+    <div class="card">
+
+      <img src="certificate.png" class="certificate" />
+
+      <div class="status-row">
+        <div class="cert-id">
+          Certificate ID: 4b94acf294879eefac01
+        </div>
+
+        <div class="verified">
+          ✔ Verified Certificate
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 </body>
 </html>
